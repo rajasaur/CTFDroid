@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+		<TextView android:text="CTF Droid"
+				  android:layout_width="fill_parent"
+				  android:layout_height="wrap_content"
+				  android:background="@color/background"
+				  android:gravity="center"
+				  android:textSize="20dip" 
+				  android:paddingTop="12dip"
+				  android:paddingBottom="12dip"/>
+		<TableLayout 
+					 android:layout_width="wrap_content"
+					 android:layout_height="wrap_content"
+					 android:stretchColumns="*"
+					 android:paddingTop="12dip">
+			<TableRow android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+					  android:gravity="center">
+				<TextView
+					android:text="Username"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_column="1" />
+				<EditText
+					android:id="@+id/username"
+					android:width="120px"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:imeOptions="actionNext" />
+			</TableRow>
+			<TableRow android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+					  android:gravity="center">
+				<TextView
+					android:text="Password"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_column="1" />
+				<EditText
+					android:id="@+id/password"
+					android:width="120px"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:inputType="textPassword"
+					android:imeOptions="actionNext" />
+			</TableRow>
+		</TableLayout>
+		<LinearLayout android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_horizontal"
+					>
+			<Button android:id="@+id/submit" 
+						android:text="Login" 
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content"
+						android:width="100px"
+						/>
+		</LinearLayout>	
+	</LinearLayout>			
+</LinearLayout>
+			
+			
+		
