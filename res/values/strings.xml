@@ -4,5 +4,7 @@
     <string name="app_name">CTF Droid</string>
     
     <string name="loginLabel">Username</string>
+    <string name="passwordLabel">Password</string>
+    <string name="loginButton">Login</string>
     
 </resources>
