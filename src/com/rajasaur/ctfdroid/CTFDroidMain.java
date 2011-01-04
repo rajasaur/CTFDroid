@@ -1,6 +1,7 @@
 package com.rajasaur.ctfdroid;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,7 +23,6 @@ public class CTFDroidMain extends Activity implements OnClickListener {
         button.setOnClickListener(this);
     }
 
-	@Override
 	public void onClick(View view) {
 		switch (view.getId()) {
 		case R.id.submit:
@@ -30,6 +30,11 @@ public class CTFDroidMain extends Activity implements OnClickListener {
 			EditText password = (EditText) findViewById(R.id.password);
 			Log.d(APP, "Username: " + username.getText());
 			Log.d(APP, "Password: " + password.getText());
+			Intent i = new Intent(this, Dashboard.class);
+			i.putExtra("username", username.getText().toString());
+			i.putExtra("password", password.getText().toString());
+			startActivity(i);
+			
 		}
 	}
 }

@@ -6,5 +6,6 @@
     <string name="loginLabel">Username</string>
     <string name="passwordLabel">Password</string>
     <string name="loginButton">Login</string>
+    <string name="dashboard">Dashboard</string>
     
 </resources>

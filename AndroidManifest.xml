@@ -11,6 +11,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Dashboard"
+                  android:label="@string/dashboard">
+        </activity>
 
     </application>
     <uses-sdk android:minSdkVersion="8" />
