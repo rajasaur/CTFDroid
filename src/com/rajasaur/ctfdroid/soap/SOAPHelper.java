@@ -6,15 +6,13 @@ import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.AndroidHttpTransport;
 
+import com.rajasaur.ctfdroid.CTFApplication;
+
 public abstract class SOAPHelper {
 	private String namespace = 
 		"http://schema.open.collab.net/sfee50/soap50/service";
 	private String soapAction = "";
-	public static String collabnetSoap = 
-		"https://forge.collab.net/ce-soap50/services/CollabNet";
-	public static String trackerSoap = 
-		"https://forge.collab.net/ce-soap50/services/TrackerApp";
-	
+
 	private String endpoint = null;
 	private String methodName = null;
 	private SoapObject request = null;
@@ -66,7 +64,7 @@ public abstract class SOAPHelper {
 		envelope.setOutputSoapObject(request);
 		
 		AndroidHttpTransport transport = 
-			new AndroidHttpTransport(endpoint);
+			new AndroidHttpTransport(CTFApplication.getInstance().getCtfServer() + endpoint);
 		String status = "";
 		try {
 			transport.call(soapAction, envelope);

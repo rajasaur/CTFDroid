@@ -24,13 +24,44 @@
 					  android:layout_height="wrap_content"
 					  android:gravity="center">
 				<TextView
+					android:text="@string/serverLabel"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_column="1" />
+				<EditText
+					android:id="@+id/server"
+					android:width="200px"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:imeOptions="actionNext" />
+			</TableRow>
+			<TableRow android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+					  android:gravity="center">
+				<TextView
+					android:text="@string/protocolLabel"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_column="1" />
+				<CheckBox
+					android:id="@+id/protocol"
+					android:width="20px"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:imeOptions="actionNext" />
+			</TableRow>
+		
+			<TableRow android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+					  android:gravity="center">
+				<TextView
 					android:text="@string/loginLabel"
 					android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
 					android:layout_column="1" />
 				<EditText
 					android:id="@+id/username"
-					android:width="120px"
+					android:width="200px"
 					android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
 					android:imeOptions="actionNext" />
@@ -45,7 +76,7 @@
 					android:layout_column="1" />
 				<EditText
 					android:id="@+id/password"
-					android:width="120px"
+					android:width="200px"
 					android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
 					android:inputType="textPassword"

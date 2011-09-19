@@ -7,13 +7,14 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class CTFDroidMain extends Activity implements OnClickListener {
 	public static final String APP = "CTFDroid";
 	
-    /** Called when the activity is first created. */
+    /** Called when the activity is first created. */  
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,11 +29,15 @@ public class CTFDroidMain extends Activity implements OnClickListener {
 		case R.id.submit:
 			EditText username = (EditText) findViewById(R.id.username);
 			EditText password = (EditText) findViewById(R.id.password);
+			EditText server = (EditText) findViewById(R.id.server);
+			CheckBox protocol = (CheckBox) findViewById(R.id.protocol);
 			Log.d(APP, "Username: " + username.getText());
 			Log.d(APP, "Password: " + password.getText());
 			Intent i = new Intent(this, Dashboard.class);
 			i.putExtra("username", username.getText().toString());
 			i.putExtra("password", password.getText().toString());
+			i.putExtra("server", server.getText().toString());
+			i.putExtra("protocol", protocol.isChecked());
 			startActivity(i);
 			
 		}

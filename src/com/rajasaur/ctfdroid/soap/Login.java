@@ -4,9 +4,10 @@ public class Login extends SOAPHelper {
 
 	private String username;
 	private String password;
+	private static final String endPointPath = "/ce-soap60/services/CollabNet"; 
 	
 	public Login(String username, String password) {
-		super(SOAPHelper.collabnetSoap, null, "login");
+		super(endPointPath, null, "login");
 		this.username = username;
 		this.password = password;
 	}

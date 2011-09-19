@@ -3,6 +3,8 @@
     <string name="hello">Welcome to Collabnet TeamForge!</string>
     <string name="app_name">CTF Droid</string>
     
+    <string name="serverLabel">CTF Host</string>
+    <string name="protocolLabel">HTTPS</string>
     <string name="loginLabel">Username</string>
     <string name="passwordLabel">Password</string>
     <string name="loginButton">Login</string>
